@@ -59,6 +59,7 @@ public class StartupActivity extends AppCompatActivity implements StartupActivit
     @Override
     public void showImagesList(Images images) {
         ((ProgressBar)findViewById(R.id.progressBar)).setVisibility(View.GONE);
+        imageRecyclerView=(RecyclerView)findViewById(R.id.imageList_recycler_view);
         imageRecyclerView.setHasFixedSize(true);
         mLayoutManager = new GridLayoutManager(this,2);
         imageRecyclerView.setLayoutManager(mLayoutManager);
