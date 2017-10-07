@@ -10,7 +10,7 @@ import com.rijo.ubertest.util.Utilities;
 public class ImageRepositoryImpl implements ImageRepository{
     @Override
     public Images getImagesFrom(String flickerBaseUrl) {
-        String imagesString= Utilities.downloadProductsFromUrl(flickerBaseUrl);
+        String imagesString= Utilities.downloadProductsFromUrl2(flickerBaseUrl);
         if(imagesString!=null) {
             Images images = Utilities.getClassFromJSONString(imagesString, Images.class);
             return images;
